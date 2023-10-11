@@ -9,9 +9,12 @@ func main() {
 	cards := []string{"Ace Of Diamonds", newCard()}
 
 	// To add an element to the end of a Slice we do
-	cards = append(cards, "Six of Spades")
+	cards = append(cards, "Six of Spades") // append does not actually modify our slice, instead, it returns a new one.
 
-	fmt.Println(cards)
+	//NOTE: every variable in a loop MUST be used, otherwise it generates a syntax error.
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
 }
 
 // function type needs to be declared AFTER its name
